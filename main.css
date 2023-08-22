@@ -380,7 +380,7 @@ input:checked + .slider:before {
   background: var(--divide_background);
   text-align: center;
   padding: 0.5rem;
-  height: 2rem;
+  height: 1rem;
 }
 
 .main_container {
@@ -552,8 +552,8 @@ span.psw {
 .eye {
 	position: absolute;
 	/* Абсолютное позиционирование от края экрана */
-    top: 33vh;
-    right: 16vh;
+    top: 36.5vh;
+    right: 23vh;
 	display: inline-block;
 	width: 20px;
 	height: 20px;
