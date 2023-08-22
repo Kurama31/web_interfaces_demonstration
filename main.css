@@ -1,0 +1,586 @@
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+
+}
+
+
+.temp_helper{
+display: flex;
+    max-width: 100%;
+    flex-direction: row;
+background: var(--color-secondary);
+height: 5vh;
+}
+/*=================== HEADER =======================*/
+
+.top-navigation{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap; /*Запретить перенос элементов*/
+    justify-content: space-around; /* space-around выравниване по одинаковому расстоянию между элементвами*/
+    height: 7vh;
+
+    position: sticky;
+
+    top: 0;
+    z-index: 700;
+    background: var(--color-secondary);
+    border-bottom: var(--divide_border);
+}
+
+.navigation_elements{
+    flex-basis: auto;
+}
+
+.flex-container_element-2 {
+  flex-basis: 40%;
+  flex-grow: 4;
+}
+
+
+/*==========================================================================*/
+/*dropdown*/
+
+
+.navbar {
+    overflow: hidden;
+    /*background-color: #333;*/
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 1rem;
+    width: 100vh;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: var(--text-primary);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*==========================================================================*/
+/*search*/
+/*
+* {box-sizing: border-box;}
+*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  /*background-color: #e9e9e9;*/
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: var(--text-primary);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  /*background: #ddd;*/
+  color: var(--text-primary);
+}
+
+.topnav a.active {
+  /*background-color: #2196F3;*/
+  color: var(--text-primary);
+}
+
+.topnav .search-container {
+  float: right;
+
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+
+.topnav input[type=text] {
+  /*padding: 6px;*/
+  margin-top: 8px;
+  font-size: 17px;
+  width: 100px;
+  border-radius: 30px;
+  border: none;
+
+}
+
+.topnav input[type=text]:hover{
+    border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  /*margin-top: 4px;*/
+  margin-right: 16px;
+  background: #ffffff;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  /*background: #ccc;*/
+    border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: none;
+  }
+}
+
+.login{
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1%;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.registration{
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--text-primary-button);
+  background-color: var(--button-primary-default);
+  border: 1px solid #1b1b1b;
+  border-radius: 5%;
+  height: 65%;
+  cursor: pointer;
+}
+
+/*===============Выбор темы светлая или темная================*/
+html,
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.theme-light {
+  --color-primary: #0060df;
+  --color-secondary: #fbfbfe;
+  --color-accent: #fd6f53;
+  --font-color: #000000;
+
+  --divide_background: #f9f9fb;
+  --divide_border: 0.5px solid #cccccc;
+  --text-primary: #1b1b1b;
+    --text-secondary: #4e4e4e;
+    --text-inactive: #9e9e9ea6;
+    --text-link: #0069c2;
+  --button-primary-default: #1b1b1b;
+    --text-primary-button: #ffffff;
+}
+
+.theme-dark {
+  --color-primary: #17ed90;
+  --color-secondary: #1b1b1b; /*#2a2c2d;*/
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+
+  --divide_background: #343434;
+  --divide_border: 0.5px solid #858585;
+  --text-primary: #fff;
+    --text-secondary: #cdcdcd;
+    --text-inactive: #cdcdcda6;
+    --text-link: #8cb4ff;
+  --button-primary-default: #fff;
+    --text-primary-button: #1b1b1b;
+
+
+
+
+
+}
+.theme_container {
+  /*display: flex;*/
+  width: 100%;
+  height: 100%;
+  background: var(--color-secondary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--text-primary);
+
+}
+
+
+
+/*----------------*/
+.topnav input[type=text] {
+  background-color: var(----color-secondary);
+}
+.topnav .search-container button {
+  background-color: var(----color-secondary);
+}
+
+.container h1 {
+  color: var(--font-color);
+  font-family: sans-serif;
+}
+.container button {
+  color: var(--font-color);
+  background: var(--color-primary);
+  padding: 10px 20px;
+  /*border: 0;*/
+  border-radius: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-top: 1.2%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+/*Фон ключа переключателя темы*/
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #889097;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: #1b1b1b;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*=================== END of HEADER functional =======================*/
+
+/*=================== main/content =======================*/
+.block_divider{
+  border-bottom: var(--divide_border);
+
+
+  background: var(--divide_background);
+  text-align: center;
+  padding: 0.5rem;
+  height: 2rem;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  width: 100%;
+  justify-content: space-around;
+
+
+}
+
+.flex-main_container_element-2{
+  width: 30rem;
+  overflow: scroll;
+  height: 40rem;
+}
+
+.flex-main_container_element-3{
+  width: 30rem;
+  overflow: scroll;
+  height: 40rem;
+}
+
+/*================== log in Высплывающее окно регистрации ===================*/
+/* Full-width input fields */
+
+.input_login{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.input_password{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for submit buttons */
+.input_login_button {
+  color: var(--text-primary-button);
+  background-color: var(--button-primary-default);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+/*
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--text-primary-button);
+  background-color: var(--button-primary-default);
+  border: 1px solid #1b1b1b;
+  border-radius: 5%;
+  height: 65%;
+  */
+}
+
+input_login_button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    /*width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;*/
+    padding: 10px 18px;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.modal-container {
+    padding: 1vh;
+}
+
+span.psw {
+    float: right;
+    padding-top: 1vh;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--divide_background); /* rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);  /*Black w/ opacity */
+    padding-top: 3.75vh;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    color: #101010;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+       color: #101010;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+.eye {
+	position: absolute;
+	/* Абсолютное позиционирование от края экрана */
+    top: 33vh;
+    right: 16vh;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+
+    #margin: 100px;
+    width: 13px;
+    height: 13px;
+    border: solid 1px #000;
+    border-radius:  75% 15%;
+    #position: relative;
+    transform: rotate(45deg);
+}
+.eye:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: solid 1px #000;
+  border-radius: 50%;
+  left: 3px;
+  top: 3px;
+  background: black;
+}
+
+.eye.view {
+	border-bottom: 3px solid #f00;
+	border-radius: 50%;
+    #background: black;
+}
